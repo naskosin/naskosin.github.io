@@ -1,0 +1,146 @@
+
+.logincontainer {
+    
+    width: 70%;
+    margin: 150px auto 200px auto;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        border: 10ch;
+}
+
+
+.container {
+    background-color: #fff;
+    width: 60%;
+    height: 100%;
+padding: 0px;
+    display: grid;
+   
+    grid-template-columns: 30% 60%;
+    place-items: center;
+    line-height: 1.5;
+   margin: 0 auto;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+    border-style: solid;
+    border-color: lightskyblue;
+    border-radius: 25px;
+    background-color: lightskyblue;
+    
+}
+
+.container>img {
+    width: 100%;
+    height:100%;
+    border-radius: 25px;
+    object-fit: fill
+}
+
+.register-container-info>.containertext>h2 {
+    padding-top: 0.4em;
+}
+
+.containertext {
+    padding: 10px;
+        text-align: center;
+        width: 70%
+}
+
+.containertext>h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: #1A2250;
+}
+
+.containertext>p {
+    font-size: 14px;
+    color: #3B4169;
+    margin: 2px 0;
+    margin-bottom: 15px;
+}
+
+.containertext>input,
+.containertext>button {
+    width: 80%;
+    border: none;
+    padding: 12px;
+    border-radius: 3px;
+}
+
+label {
+    color: #190c4d;
+    transform: translateY(-1.5rem);
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+}
+
+.containertext>input {
+    text-align: center;
+    border: 2px solid lightskyblue;
+    margin: 3px auto 7px auto;
+    font-size: 0.8rem;
+    color: #656880;
+    border-left: solid 0.3em green;
+}
+
+.containertext>.register-btn,
+.containertext>.login-btn {
+    text-align: center;
+    background-color:  #19BEC2 ;
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1.6em auto 0 auto ;
+    box-shadow: 0 5px 15px #89caff94;
+    transition: box-shadow .3s ease-in-out;
+}
+
+.register-btn:hover,
+.login-btn:hover {
+    background-image: linear-gradient(#2dd2d4);
+    box-shadow: none;
+}
+
+span {
+    display: block;
+    text-align: center;
+    margin: 20px 0 0;
+    color: #BABDCB;
+    font-size: 12px;
+}
+
+.card-no-account {
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: .875rem;
+    color: #190c4d;
+}
+
+.card-no-account>p>a {
+    color: #8C1415;
+}
+
+
+.errors{
+    border: 3px solid red;
+}
+.button{
+    margin-top: 20px;
+    background-color: #19BEC2;
+}
+.button:disabled{
+    margin-top: 20px;
+    background-color: lightgrey;
+}
+#errors{
+    background: rgb(231, 94, 122);
+    color:white;
+    padding: 3px;
+    border: solid 2px crimson;
+    border-radius: 5px;
+    
+}
+.containertext>input.input__error{
+    border-left: solid 0.3em red;
+}

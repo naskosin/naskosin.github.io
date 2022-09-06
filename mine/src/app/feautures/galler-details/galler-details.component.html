@@ -1,0 +1,125 @@
+<div *ngIf="!!!fish">Loading...</div>
+<section *ngIf="!!fish" class="section__main">
+  <article class="main">
+    <div class="main__img__wrapper">
+      <img class="main__img" [src]="fish.img" alt="No picture" />
+    </div>
+    <div class="details__div">
+      <p><span>Fish species: </span> {{ fish.species }}</p>
+      <p><span>Bait: </span>{{ fish.bait }}</p>
+      <p><span>The story: </span>{{ fish.story }}</p>
+
+      <p><span>Weight: </span>{{ fish.weight }} kg.</p>
+      <ng-container *ngIf="this.user._id == fish._ownerId">
+        <button class="delete" (click)="deleteHandler()">Delete article</button>
+        <button class="edit">
+          <a [routerLink]="['/gallery/editpage', fish._id]">Edit article</a>
+        </button>
+      </ng-container>
+    </div>
+  </article>
+</section>
+
+<section *ngIf="comments">
+  <div class="comments" *ngFor="let comment of comments">
+    <div class="comment">
+      <p class="comment__user">
+        User: <span>{{ comment.email }}</span
+        >, commented
+      </p>
+      <div *ngIf="!comment.isInEdit">
+        <div class="comment__text">
+          <p>{{ comment.comment }}</p>
+        </div>
+
+        <div class="comments__buttons">
+          <button
+            class="comments__buttons__delete"
+            *ngIf="user._id === comment._ownerId"
+            (click)="deleteComment(comment._id)"
+          >
+            Delete
+          </button>
+          <button
+            class="comments__buttons__edit"
+            *ngIf="user._id === comment._ownerId"
+            (click)="comment.isInEdit = true"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="comment.isInEdit">
+      <div>
+        <form
+          class="edit__mode"
+          #editPostForm="ngForm"
+          (ngSubmit)="editCommentHandler(comment._id, editPostForm)"
+        >
+          <textarea
+            type="text"
+            #themeComment="ngModel"
+            id="uses"
+            placeholder="This day"
+            name="comment"
+            [ngModel]="comment.comment"
+            ngModel
+            required
+            minlength="10"
+          ></textarea>
+          <ng-container *ngIf="themeComment.touched && themeComment.invalid">
+            <p *ngIf="themeComment.errors?.['required']" id="input-error">
+              Comment is required!
+            </p>
+            <p *ngIf="themeComment.errors?.['minlength']" id="input-error">
+              Must be at least 5 characters long!
+            </p>
+          </ng-container>
+          <div class="comments__buttons__edit__mode">
+            <button class="comments__buttons__edit__mode__save">Save</button
+            ><button
+              (click)="comment.isInEdit = false"
+              class="comments__buttons__edit__mode__cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="no__comments" *ngIf="comments?.length === 0">
+  <p>No comments yet!</p>
+</div>
+
+<div class="container">
+  <form
+    class="form__container"
+    #createCommentForm="ngForm"
+    (ngSubmit)="commentHandler(createCommentForm)"
+  >
+    <h2>Comment</h2>
+
+    <textarea
+      type="text"
+      #themeComment="ngModel"
+      id="uses"
+      placeholder="This day"
+      name="comment"
+      ngModel
+      required
+      minlength="10"
+    ></textarea>
+    <ng-container *ngIf="themeComment.touched && themeComment.invalid">
+      <p *ngIf="themeComment.errors?.['required']" id="input-error">
+        Comment is required!
+      </p>
+      <p *ngIf="themeComment.errors?.['minlength']" id="input-error">
+        Must be at least 5 characters long!
+      </p>
+    </ng-container>
+    <button [disabled]="this.createCommentForm.invalid">Comment</button>
+  </form>
+</div>

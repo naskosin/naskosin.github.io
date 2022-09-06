@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Playball&display=swap');
+.header{
+    width: 100%;
+    border-bottom: solid 3px white;
+    background-image: url('/assets/2300x1380-13.jpg');
+    background-size:fill ;
+    display: inline-block;
+    
+    position: fixed;
+    top: 0;
+    left:0;
+    
+    height: 150px;
+}
+.header a, p{
+    color: black;
+    font-family: Lobster, sans-serif;
+    letter-spacing: 1px;
+    padding: 3px;
+    font-style: italic;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.header>h1{
+    padding: 0;
+   margin-top: 20px;
+    padding-left: 20px;
+    font-size: 5rem;
+ 
+    text-align: left;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.header>ul{
+    margin-top: 20px;
+    margin-right: 40px;
+    padding:0 10px;
+}
+.header nav{
+    display: inline-block;
+    margin: 90px 0px 0px 100px;
+    text-align: right;
+}
+
+
+.header li{
+    text-align: center;
+    display: inline-block;
+    margin:0 0 30px 40px;
+    border-radius: 4px;
+    background-color: lightskyblue;
+    border-top-left-radius: 30px; 
+}
+
+h1, h2, h3, h4{
+    font-family: Playball, serif;
+}
+p{border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 0 5px;
+    color: white;
+    background-color: aqua;
+}
+#not__logged>li{
+   
+        text-align: center;
+        display: inline-block;
+        margin:0 0 30px 40px;
+        border-radius: 4px;
+        background-color: lightskyblue;
+        border-top-left-radius: 30px; 
+    
+}
+
+#not__logged>ul{
+    
+    padding:0;
+    display: inline-block;
+   
+
+}
+#not__logged{
+    display: inline-block;
+    margin: 90px 0px 0px 350px ;
+    text-align: right;
+}
+.notification{
+    position: absolute;
+    top: 150px;
+    right: 40px;
+    color: white;
+    padding: 15px 20px;
+    background-color: red;
+    opacity: 0.8;
+    border: solid 4px red;
+    border-radius: 30px;
+}
+@media only screen and (max-width: 600px) {
+    .header>h1{
+        font-size: 2rem;
+    }
+    .header>nav{
+        display: inline-block;
+        margin: 0;
+        text-align: right;
+    }
+    #not__logged{
+        display: inline-block;
+        text-align: right;
+    }
+    .header li{
+        text-align: center;
+        display: inline-block;
+ 
+        border-radius: 4px;
+        background-color: lightskyblue;
+        border-top-left-radius: 30px; 
+    }
+    .header a, p{
+        color: black;
+        font-family: Lobster, sans-serif;
+        letter-spacing: 1px;
+        padding: 3px;
+        font-style: italic;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 10px;
+    }
+}

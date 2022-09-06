@@ -1,0 +1,112 @@
+.createcontainer {
+    width: 70%;
+    height: calc();
+    margin: 150px auto 200px auto;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        border: 10ch;
+    }
+    
+    .createcontainerinfo {
+        background-color: #fff;
+        width: 70%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        place-items: center;
+        line-height: 1.5;
+        margin: 160px auto 100px auto;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+        border-style: solid;
+        border-color: lightskyblue;
+        border-radius: 25px;
+        background-color: lightskyblue;
+    }
+    
+    .createcontainerinfo>img {
+        width: 100%;
+        height:100%;
+        border-radius: 25px;
+    
+    
+    }
+    
+    
+    .container{
+        background-color: #fff;
+        width: 600px;
+        height: 450px;
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        place-items: center;
+        line-height: 1.5;
+        left: 28%;}
+    
+        .containertext {
+            padding: 10px;
+            text-align: center;
+            width: 60%
+        }
+        
+        .containertext>h2 {
+            font-size: 1.6rem;
+            text-align: center;
+            color: #1A2250;
+        }
+        
+        .containertext>p {
+            font-size: 14px;
+            color: #3B4169;
+            margin: 2px 0;
+            margin-bottom: 15px;
+        }
+        
+        .containertext>input,
+        .containertext>textarea,
+        .containertext>button {
+            width: 100%;
+            border: none;
+            padding: 12px;
+            border-radius: 3px;
+            
+        }
+        .containertext>textarea{
+            border: solid 2px lightskyblue;
+        }
+        
+        label {
+            color: #190c4d;
+            transform: translateY(-1.5rem);
+            font-size: 14px;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 700;
+        }
+        
+        .containertext>input {
+            border: 2px solid lightskyblue;;
+            margin: 3px 0 7px;
+            font-size: 0.8rem;
+            color: #656880;
+        }
+        
+       
+
+        .button{
+            margin-left: 15px;
+            background-color: #19BEC2;
+            padding: 20px;
+        }
+        .button:disabled{
+            margin-left: 15px;
+            background-color: lightgrey;
+            padding: 20px;
+
+        }
+        #input-error{
+            background: rgb(231, 94, 122);
+            color:white;
+            padding: 3px;
+            border: solid 2px crimson;
+            border-radius: 5px;
+            margin-left: 15px;
+        }

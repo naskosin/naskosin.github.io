@@ -1,0 +1,16 @@
+
+<section  *ngIf="fishes">
+<article class="top" *ngFor="let fish of fishes; let i = index">
+    <p class="top__description"><span class="top__span">Number:   </span>{{i+1}}</p>
+<div class="top__img__wrapper">
+    
+    <img [src]="fish.img" alt="">
+    
+</div>
+<!-- <p>Date: {{ fish._createdOn | date:"dd-MM-yyyy" }}</p> -->
+<p class="top__description__bottom"><span class="top__span__bottom">Weight: </span>{{fish.weight}}</p>
+
+</article>
+
+</section>
+<div class="no_fishes" *ngIf="fishes.length==0"><p><span>Ooops!</span> There's no pretenders for top five, be the first!</p></div>

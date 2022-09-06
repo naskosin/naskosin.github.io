@@ -1,0 +1,19 @@
+<section class="section__main">
+    <form [formGroup]="searchFormGroup" (ngSubmit)="searchContent()" >
+        <label for="uses">Search for species:</label>
+        <input formControlName="search" type="text" for="uses">
+        <button  >Search</button>
+    </form>
+    <section class="section__second">
+        
+        <div *ngIf="fishes">
+          
+    <ul *ngIf="fishes"><app-gallery-item *ngFor="let fish of fishes" [fish]="fish"></app-gallery-item></ul> 
+ 
+    <div class="no_fishes" *ngIf="!fishes"><p><span>Ooops!</span> There's no fishes from searched species!</p></div></div>
+
+
+
+</section>
+</section>
+

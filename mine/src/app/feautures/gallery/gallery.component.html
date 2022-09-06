@@ -1,0 +1,40 @@
+<div *ngIf="!fishes">Loading...</div>
+<section *ngIf="fishes" class="section__main">
+  <article class="main">
+    <div class="main__img__wrapper">
+      <img
+        class="main__img"
+        src="assets/5ce826aedf29c86610716597.jpg"
+        alt="No picture"
+      />
+    </div>
+    <div class="main__div">
+      <h1>Fishing is passion!</h1>
+      <p>
+        Fish early, and fish late. Many species of fish bite best right at dawn
+        and dusk, in ambient sunlight. During the mid-day hours cloud cover can
+        make for better fishing, and in direct sunlight (especially during the
+        heat of summer) look for areas with shade. Fish often seek out shade
+        when it’s hot and sunny and become more active during the cool hours of
+        the day, just as you or I might.
+      </p>
+    </div>
+  </article>
+  <section class="section__second">
+    <div *ngIf="fishes">
+      <ul>
+        <app-gallery-item
+          *ngFor="let fish of fishes"
+          [fish]="fish"
+        ></app-gallery-item>
+      </ul>
+    </div>
+
+    <div class="no_fishes" *ngIf="fishes.length == 0">
+      <p>
+        <span>Ooops!</span> There's no fishes in the dock. Change your bait and
+        try again!
+      </p>
+    </div>
+  </section>
+</section>

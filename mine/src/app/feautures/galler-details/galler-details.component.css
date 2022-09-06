@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Playball&display=swap');
+
+
+.details__div> p{
+
+  margin: 30px;
+  display: inline-block;
+  width: 80%;
+font-size: 20px;
+  text-align: justify;
+  text-indent: 18px;
+  color: white;
+}
+.details__div>p:last-of-type{
+ padding-bottom: 40px;
+}
+span{
+  font-style: italic;
+  font-size: 25px;
+  text-align: left;
+  color: black;
+  font-weight: bold;
+}
+.sectionmain{
+  margin: 160px auto ;
+  width: 80%;
+  display: flex;
+  background-color: lightskyblue;
+  border-radius: 50px;
+
+}
+
+.main__img__wrapper{
+  height:100%;
+  margin:0 ;
+  width:60%;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 50px;
+
+}
+.main__img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  
+}
+.main h1{font-size: 2rem;
+  line-height: 5;
+  text-align: left;
+  font-weight: 600;
+ padding: 0;
+ margin-top: 60px;
+ margin-right: 2px;
+  margin-left: 80px;
+}
+
+
+.details__div{
+  display:inline-block;
+  width:35%;
+  background-color: lightskyblue;
+  border-radius: 50px;
+
+  vertical-align: top;
+
+  text-align: right;
+  margin-top: 0;
+padding: 30px 30px 0 30px ;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+
+}
+.edit{
+ 
+  background-color: rgb(11, 194, 11); 
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+
+}
+.details__div p{
+  word-wrap: break-word;
+  text-align: justify;
+}
+.delete{
+    background-color: red;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+
+}
+.comments{
+  width: 50%;
+  height: 200px;
+  background-color: lightgray;
+ border-radius: 30px;
+
+ 
+  margin: 20px auto;
+}
+.comment{
+display: flex;
+flex-direction: column;
+}
+.comment__user{
+  background-color: gray;
+  text-indent: 20px;
+  padding: 20px;
+  margin: 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+ 
+}
+.comment__user span{
+font-size: 20px; 
+color: white;
+}
+.comment__text{
+
+background-color: lightgray;
+text-indent: 30px;
+font-size: 20px;
+font-style: italic;
+}
+
+
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+border-radius: 30px;
+background-color: lightskyblue;
+width: 50%;
+justify-content: center;
+margin: 0 auto;
+}
+.form__container{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 80%;
+margin: 0 auto;
+}
+.form__container textarea{
+width: 100%;
+margin: 30px auto;
+height: 150px
+}
+.form__container button{
+margin: 20px;
+padding: 10px  20px;
+border-radius: 30px;
+text-align: left;
+}
+#input-error{
+background: rgb(231, 94, 122);
+color:white;
+padding: 3px;
+border: solid 2px crimson;
+border-radius: 5px;
+
+}
+.no__comments{
+margin-left: 300px;
+font-size: 30px;
+
+}
+.edit__mode{
+margin-top: 20px;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+width:100%;
+
+}
+.edit__mode textarea{
+width: 80%;
+}
+.comments__buttons__edit__mode__save{
+background-color: rgb(10, 114, 10); 
+margin: 10px;
+padding: 5px 15px;
+border-radius: 10px;
+color: white;
+}
+
+.comments__buttons__edit__mode__cancel{
+
+margin: 10px;
+padding: 5px 15px;
+border-radius: 10px;
+}
+.comments__buttons{
+
+margin-top: 45px;
+margin-left: 550px;
+ padding: 5px 15px;
+}
+.comments__buttons__delete{
+background-color: red;
+margin: 10px;
+padding: 5px;
+border-radius: 10px;
+color: white;
+
+}
+.comments__buttons__edit{
+ 
+background-color: rgb(11, 194, 11); 
+margin: 10px;
+padding: 5px 15px;
+border-radius: 10px;
+
+}
+p{
+  font-family: Lobster, sans-serif;
+}

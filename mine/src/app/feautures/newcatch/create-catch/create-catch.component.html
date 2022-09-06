@@ -1,0 +1,58 @@
+<div class="createcontainerinfo">
+   
+    <img src="/assets/01-azores-fishing.jpg" alt="image">
+
+    <form   #createCatchForm = "ngForm"class="containertext"  (ngSubmit)="formHandler(createCatchForm)" >
+
+        <h2>Create Catch</h2>
+        <p>Add your fish of lifetime!</p>
+
+        <label for="title">Species:</label>
+        <input type="text" #themeSpecies ="ngModel" id="title" placeholder="Trout" name="species" value="" ngModel required minlength="5">
+
+        <ng-container *ngIf="themeSpecies.touched && themeSpecies.invalid">
+            <p *ngIf="themeSpecies.errors?.['required']" id="input-error">Species is required!</p>
+            <p *ngIf="themeSpecies.errors?.['minlength']" id="input-error">Must be at least 5 characters long!</p>
+        </ng-container>
+
+        <label for="painting-tech">Bait:</label>
+        <input type="text" #themeBait = "ngModel" id="painting-tech" placeholder="Lure" name="bait" value="" ngModel required minlength="5">
+
+        <ng-container *ngIf="themeBait.touched && themeBait.invalid">
+            <p *ngIf="themeBait.errors?.['required']" id="input-error">Bait is required!</p>
+            <p *ngIf="themeBait.errors?.['minlength']" id="input-error">Must be at least 5 characters long!</p>
+        </ng-container>
+
+        <label for="picture">Fish picture:</label>
+        <input type="text" #themeImg = "ngModel" id="picture" placeholder="http://..." name="img" value="" ngModel pattern="(http:|https:)+[^\s]+[\w]" required minlength="10">
+
+        <ng-container *ngIf="themeImg.touched && themeImg.invalid">
+            <p *ngIf="themeImg.errors?.['required']" id="input-error">Img is required!</p>
+            <p *ngIf="themeImg.errors?.['minlength']" id="input-error">Must be at least 10 characters long!</p>
+            <p *ngIf="themeImg.errors?.['pattern']" id="input-error">Must begin with http:// or https://!</p>
+        </ng-container>
+
+
+        <label for="certificate">Story:</label>
+        <textarea type="text" #themeStory="ngModel" placeholder="This day..." id="certificate" rows="5" name="story" required ngModel minlength="50"></textarea>
+
+        <ng-container *ngIf="themeStory.touched && themeStory.invalid">
+            <p *ngIf="themeStory.errors?.['required']" id="input-error">Story is required!</p>
+            <p *ngIf="themeStory.errors?.['minlength']" id="input-error">Must be at least 50 characters long!</p>
+        </ng-container>
+
+
+        <label for="weight">Weight of the fish:</label>
+        <input type="text" id="weight" placeholder="1" name="weight" value="" #themeWeight="ngModel" required ngModel pattern="[1-9][0-9]*">
+
+        <ng-container  *ngIf="themeWeight.touched && themeWeight.invalid">
+            <p *ngIf="themeWeight.errors?.['required']" id="input-error">Weight is required!</p>
+            <p *ngIf="themeWeight.errors?.['pattern']" id="input-error">Must be positive number!</p>
+        </ng-container>
+       
+        <button [disabled]="createCatchForm.invalid"class="button">Create</button>
+
+
+    </form>
+
+</div>

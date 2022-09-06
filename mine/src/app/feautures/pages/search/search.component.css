@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Playball&display=swap');
+
+
+
+main{
+    width:100%;
+     
+     
+ }
+ .section__second{
+    margin-top: 200px;
+    padding-bottom: 100px;
+    
+ }
+ .section__main{
+     margin: 0 auto ;
+     width: 80%;
+     height: auto;
+     margin-top: 153px;
+ 
+ }
+
+.main{
+    margin: 40px 0;
+     display: inline-block;
+     background-color: white;
+     border-radius: 50px;
+ }
+
+ul{
+    padding:0;
+    margin: 0;
+    
+}
+
+li{
+    text-align: center;
+    display: inline-block;
+    margin:0 0 30px 40px;
+    border-radius: 4px;
+    background-color: lightskyblue;
+    border-top-left-radius: 30px;   
+
+}
+
+.article__button{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding: 5px 50px;
+    border-radius: 30px;
+    background-color: lightblue;
+    top: 10px
+}
+p{
+    font-weight: 500;
+    margin: 10px 0;
+}
+.article{
+    display: inline-block;
+    width:400px;
+    
+}
+.article__img__wrapper{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    width: 350px;
+   height:300px;
+    border-top-left-radius: 30px;  
+    margin-bottom: 5px; 
+    
+}
+.article__img__wrapper .article__img{
+    width: 100%;
+    height:100%;
+object-fit: fill;
+
+}
+.main__img__wrapper{
+    height:100%;
+    margin:0 ;
+    width:60%;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 50px;
+  
+}
+.main__img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    
+}
+.main h1{font-size: 2rem;
+    line-height: 5;
+    text-align: center;
+    font-weight: 600;
+   padding: 0;
+   margin-top: 60px;
+   margin-right: 2px;
+    margin-left: 80px;
+}
+.main p{
+    display: inline-block;
+    width: 80%;
+    margin-top: 0px;
+    text-align: justify;
+    text-indent: 18px;
+}
+.main__div{
+    display:inline-block;
+    width:30%;
+    height: 100%;
+    vertical-align: top;
+    background-color: white;
+    text-align: right;
+}
+.no_fishes{
+    font-size: 30px;
+    color: blueviolet;
+    text-align: center;
+    margin: 50px auto;
+}
+.no_fishes span{
+    font-size: 50px;
+    color: black;
+    font-style: italic;
+}
+form{
+    width: 100%;
+    text-align: right;
+    margin-bottom:50px;
+    margin-top: 220px;
+}
+label{
+    font-family: Lobster, sans-serif;
+    display: block;
+    font-size: 20px;
+    margin: 10px;
+}
+form>button{
+    margin: 10px;
+    background-color: #19BEC2;
+    color: white;
+    padding: 1px 10px;
+    border-radius: 10px;
+}

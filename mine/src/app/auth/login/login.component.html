@@ -1,0 +1,37 @@
+<section class="logincontainer">
+
+    <div class="container">
+       
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Tarpon_Jump.jpg" alt="image"/>
+
+        <form  method="POST" class="containertext" [formGroup]="loginFormGroup" (ngSubmit)="loginHandler()">
+            <h2>Login</h2>
+            <p>The biggest catches!</p>
+
+            <label for="uses">Email:</label>
+            <input type="text" formControlName="email" id="uses" placeholder="nasko@abv.bg" name="email" [class.input__error]="loginFormGroup.controls['email'].touched && loginFormGroup.controls['email'].invalid">
+
+            <ng-container *ngIf = "loginFormGroup.controls['email'].touched && loginFormGroup.controls['email'].invalid">
+                <p *ngIf="loginFormGroup.controls['email'].errors?.['required']" id="errors">Email is required!</p>
+                <p *ngIf="loginFormGroup.controls['email'].errors?.['email']" id="errors">Email is invalid!</p>
+            </ng-container>
+
+            
+            <label for="password">Password:</label>
+            <input type="password"  formControlName="password"  id="password" placeholder="******" name="password" [class.input__error]="loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid">
+
+            <ng-container *ngIf = "loginFormGroup.controls['password'].touched && loginFormGroup.controls['password'].invalid">
+                <p *ngIf="loginFormGroup.controls['password'].errors?.['required']" id="errors">Password is required!</p>
+                <p *ngIf="loginFormGroup.controls['password'].errors?.['minlength']" id="errors">Password is invalid!</p>
+            </ng-container>
+
+
+            <button class="button" [disabled]="this.loginFormGroup.invalid">Login</button>
+            <div class="card-no-account">
+                <p>Don't have an account? <a routerLink="/register">Sign up</a>.</p>
+            </div>
+            
+        </form>
+        
+    </div>
+</section>
